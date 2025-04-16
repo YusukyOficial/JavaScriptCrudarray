@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Sites</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CRUD de Sites</h1>
+    
+    <!-- Container do formulário -->
+    <div class="form-container">
+        <h2 id="form-title">Adicionar Novo Site</h2>
+        <form id="site-form">
+            <!-- Campo oculto para armazenar o ID durante edições -->
+            <input type="hidden" id="site-id">
+            
+            <div class="form-group">
+                <label for="nome">Nome do Site:</label>
+                <input type="text" id="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço (URL):</label>
+                <input type="text" id="endereco" required>
+            </div>
+            
+            <!-- Botões de ação do formulário -->
+            <button type="submit" id="submit-btn">Salvar</button>
+            <button type="button" id="cancelar-btn" class="cancelar" style="display: none;">Cancelar</button>
+        </form>
+    </div>
+    
+    <!-- Tabela de exibição dos sites cadastrados -->
+    <h2>Sites Cadastrados</h2>
+    <table id="sites-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="sites-body">
+            <!-- Os registros serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
